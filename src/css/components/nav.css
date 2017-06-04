@@ -1,0 +1,59 @@
+.App.menu-open .site-nav {
+  -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+.site-nav {
+  position: fixed;
+  width: 25%;
+  min-width: 300px;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  overflow: auto;
+  visibility: visible;
+  -webkit-overflow-scrolling: touch;
+  background-color: white;
+  padding: 36px;
+  text-align: right;
+
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.16, 0.68, 0.43, 0.99);
+  transition: transform 400ms cubic-bezier(0.16, 0.68, 0.43, 0.99);
+
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+
+  right: 0;
+}
+
+.site-nav .site-close:hover svg {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  overflow: hidden;
+}
+
+.site-nav .site-close svg {
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.2555, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.2555, 1);
+  height: 20px; width: 20px;
+}
+
+.site-nav ul.menu {
+  padding-top: 20%; padding-bottom: 20%;
+}
+
+.site-nav ul.menu li {
+  font-size: 24px;
+  font-family: 'bariollight';
+  line-height: 32px;
+}
+
+.site-nav ul.menu li.menu-section {
+  margin-bottom: 32px;
+}
+
+.site-nav ul.menu li a {
+  text-decoration: none;
+  color: #39393a;
+}

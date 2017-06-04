@@ -1,0 +1,50 @@
+.App.menu-open header.top-bar {
+
+}
+
+header.top-bar {
+  font-size: 24px;
+  padding-top: 30px; padding-bottom: 30px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 9999;
+}
+
+header.top-bar .logo {
+  height: 24px;
+  line-height: 24px;
+  float: left;
+}
+
+header.top-bar .logo svg {
+  height: 24px;
+  position: relative;
+  top: 1px;
+  fill: white;
+}
+
+.App.menu-open header.top-bar .menu-icon {
+  display: none;
+  visibility: hidden;
+}
+
+header.top-bar .menu-icon {
+  float: right;
+}
+
+header.top-bar .menu-icon svg {
+  height: 20px;
+  position: relative;
+  top: 5px;
+  fill: white;
+}
+
+header.top-bar a {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+}

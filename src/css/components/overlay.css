@@ -1,0 +1,23 @@
+.App.menu-open .overlay {
+  display: block;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: rgba(0,0,0,0.5);
+  -webkit-animation: fade 400ms;
+  animation: fade 400ms;
+  visibility: visible;
+}
+
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 100 }
+}
+
+.overlay {
+  display: none;
+}

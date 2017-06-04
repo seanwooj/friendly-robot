@@ -1,0 +1,23 @@
+{
+  "name": "friendly-robot",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "contentful": "^4.3.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-inlinesvg": "^0.6.0",
+    "semantic-ui-css": "^2.2.10",
+    "semantic-ui-react": "^0.68.4"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "6.22.0",
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

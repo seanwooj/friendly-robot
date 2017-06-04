@@ -1,0 +1,13 @@
+body {
+  font-family: 'bariolregular';
+}
+
+@import 'css/grid.css';
+@import 'css/reset.css';
+@import 'css/fonts.css';
+
+/* Components */
+@import 'css/components/header.css';
+@import 'css/components/overlay.css';
+@import 'css/components/nav.css';
+@import 'css/components/content.css';
