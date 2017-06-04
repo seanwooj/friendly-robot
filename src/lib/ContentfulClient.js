@@ -20,14 +20,6 @@ class ContentfulClient {
     })
   }
 
-  sync = () => {
-    this.client.sync({initial: true})
-    .then((response) => {
-      console.log(response.entries)
-      console.log(response.assets)
-    });
-  }
-
   fetchPages = () => {
     return this.client.getEntries({
       content_type: 'page'

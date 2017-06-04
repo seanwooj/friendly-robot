@@ -14,13 +14,9 @@ class App extends Component {
     super(props);
 
     this.toggleNav = this.toggleNav.bind(this);
-    this.client = new ContentfulClient();
   }
 
   componentDidMount() {
-
-    // this may be useful in the constructor. peek into the book to make sure
-    // this follows best practices.
     this.client.fetchPages().then(function(pages){
       this.setState(pages);
     }.bind(this))
