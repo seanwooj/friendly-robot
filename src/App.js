@@ -40,6 +40,7 @@ class App extends Component {
   render() {
     let classNames = ['App'];
     if(this.state.navIsOpen) classNames.push('menu-open');
+    if(!this.state.hasFetched) classNames.push('loading');
     return (
       <Router history={history}>
         <div className={classNames.join(' ')}>

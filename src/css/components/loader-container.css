@@ -1,0 +1,14 @@
+.App.loading .loader-container {
+  display: table;
+  background: #ed5565;
+}
+
+.App.loading .loader-container .loader-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.App.loading .loader-container .loader {
+  display: table;
+  margin: 0 auto;
+}

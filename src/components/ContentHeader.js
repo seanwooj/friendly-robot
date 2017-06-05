@@ -21,7 +21,6 @@ class ContentHeader extends React.Component {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
 
-    debugger;
     this.setState({
       bgImgUrl: this.props.content.fields.headerImage.fields.file.url,
       headline: this.props.content.fields.headline
