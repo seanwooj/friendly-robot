@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import close from '../img/close.svg';
 import Isvg from 'react-inlinesvg';
+import { Link } from 'react-router-dom';
 
 
 class Nav extends Component {
@@ -15,11 +16,11 @@ class Nav extends Component {
           </div>
           <ul className='menu'>
             <li className='menu-section'>Products</li>
-            <li><a href='#'>Cutting Board</a></li>
-            <li><a href='#'>Serving Tray</a></li>
-            <li><a href='#'>Tea Lights</a></li>
-            <li><a href='#'>Herb Dish</a></li>
-            <li><a href='#'>Coaster</a></li>
+            <li><Link to='/cutting-board'>Cutting Board</Link></li>
+            <li><Link to='/serving-tray'>Serving Tray</Link></li>
+            <li><Link to='/tea-light'>Tea Lights</Link></li>
+            <li><Link to='/herb-dish'>Herb Dish</Link></li>
+            <li><Link to='/coaster'>Coaster</Link></li>
           </ul>
       </nav>
     );

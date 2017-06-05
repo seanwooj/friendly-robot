@@ -5,10 +5,12 @@
   "dependencies": {
     "contentful": "^4.3.0",
     "gulp": "^3.9.1",
+    "history": "^4.6.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-inlinesvg": "^0.6.0",
     "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "semantic-ui-css": "^2.2.10",
     "semantic-ui-react": "^0.68.4"
   },
