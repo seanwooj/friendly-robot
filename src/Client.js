@@ -1,11 +1,19 @@
 import fetch from 'isomorphic-fetch';
 
 class Client {
-  constructor() {
-  }
-
   fetchPages() {
     return fetch('/api/pages', {
+      method: 'get',
+      headers: {
+        accept: 'application/json',
+      }
+    })
+    .then(this.checkStatus)
+    .then(this.parseJson);
+  }
+
+  fetchPage(vanityUrl) {
+    return fetch('/api/pages?vanityUrl=' + vanityUrl, {
       method: 'get',
       headers: {
         accept: 'application/json',

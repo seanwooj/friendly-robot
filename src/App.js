@@ -21,8 +21,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    client.fetchPages().then((pages) => {
-      debugger;
+    client.fetchPage('/').then((pages) => {
+      this.setState({
+        hasFetched: true,
+        pages: pages
+      })
     })
   }
 
