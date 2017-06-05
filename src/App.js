@@ -28,7 +28,9 @@ class App extends Component {
       headers: {
         accept: 'application/json',
       }
-    }).then((res) => {
+    })
+    .then(res => res.json())
+    .then((res) => {
       debugger;
     });
   }
