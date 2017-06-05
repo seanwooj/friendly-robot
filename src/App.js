@@ -5,7 +5,9 @@ import Header from './components/Header.js';
 import Nav from './components/Nav.js';
 import Overlay from './components/Overlay.js';
 import Content from './components/Content.js';
-import DataClient from './lib/dataClient.js'
+
+// this should probably be moved
+import fetch from 'isomorphic-fetch';
 
 const history = createHistory();
 
@@ -16,26 +18,25 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.dataClient = new DataClient();
 
     this.toggleNav = this.toggleNav.bind(this);
   }
 
   componentDidMount() {
-    this.dataClient
-      .fetchData()
-      .then((data) => {
-        debugger;
-      })
+    fetch('/api/pages', {
+      method: 'get',
+      headers: {
+        accept: 'application/json',
+      }
+    }).then((res) => {
+      debugger;
+    });
   }
 
   toggleNav() {
     this.setState({
       navIsOpen: !(this.state.navIsOpen)
     });
-
-    console.log('toggled!');
-    console.log('navIsOpen:' + this.state.navIsOpen)
   };
 
   render() {
