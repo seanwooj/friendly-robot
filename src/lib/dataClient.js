@@ -1,11 +1,8 @@
 const fs = require('fs');
 const SAVED_PAGE_DB_FILE = './src/db/contentfulPageContent.json';
 
-debugger;
-
 class DataClient {
   constructor() {
-    debugger;
     this.fetchData = this.fetchData.bind(this);
     this.getDataByPath = this.getDataByPath.bind(this);
   }
