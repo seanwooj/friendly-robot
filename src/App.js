@@ -5,34 +5,25 @@ import Header from './components/Header.js';
 import Nav from './components/Nav.js';
 import Overlay from './components/Overlay.js';
 import Content from './components/Content.js';
-
-// this should probably be moved
-import fetch from 'isomorphic-fetch';
+import { client } from './Client.js';
 
 const history = createHistory();
 
 class App extends Component {
   state = {
     navIsOpen: false,
+    hasFetched: false
   };
 
   constructor(props) {
     super(props);
-
     this.toggleNav = this.toggleNav.bind(this);
   }
 
   componentDidMount() {
-    fetch('/api/pages', {
-      method: 'get',
-      headers: {
-        accept: 'application/json',
-      }
-    })
-    .then(res => res.json())
-    .then((res) => {
+    client.fetchPages().then((pages) => {
       debugger;
-    });
+    })
   }
 
   toggleNav() {
