@@ -21,10 +21,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    client.fetchPage('/').then((pages) => {
+    client.fetchPage('/').then((page) => {
+      console.log(page);
       this.setState({
         hasFetched: true,
-        pages: pages
+        page: page
       })
     })
   }
@@ -49,7 +50,9 @@ class App extends Component {
             handleNavClose={this.toggleNav}
           />
           <Content
+            page={this.state.page}
             titleText='Design for Humans'
+            hasFetched={this.state.hasFetched}
           />
           <Overlay
             handleNavClose={this.toggleNav}
