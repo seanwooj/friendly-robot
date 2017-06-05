@@ -1,6 +1,5 @@
 .App.loading .loader-container {
   display: table;
-  background: #ed5565;
 }
 
 .App.loading .loader-container .loader-inner {
@@ -11,4 +10,8 @@
 .App.loading .loader-container .loader {
   display: table;
   margin: 0 auto;
+}
+
+.loader > div > div {
+  border: 2px solid black;
 }

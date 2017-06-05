@@ -20,6 +20,10 @@ header.top-bar .logo {
   float: left;
 }
 
+.App.loading header.top-bar .logo svg {
+  fill: black;
+}
+
 header.top-bar .logo svg {
   height: 24px;
   position: relative;
@@ -36,11 +40,19 @@ header.top-bar .menu-icon {
   float: right;
 }
 
+.App.loading header.top-bar .menu-icon svg {
+  fill: black;
+}
+
 header.top-bar .menu-icon svg {
   height: 20px;
   position: relative;
   top: 5px;
   fill: white;
+}
+
+.App.loading header.top-bar a {
+  color: black;
 }
 
 header.top-bar a {
