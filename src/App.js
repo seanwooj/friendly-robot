@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Router from 'react-router/BrowserRouter';\
 import Header from './components/Header.js';
 import Nav from './components/Nav.js';
 import Overlay from './components/Overlay.js';
@@ -17,9 +18,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.client.fetchPages().then(function(pages){
-      this.setState(pages);
-    }.bind(this))
+
   }
 
   toggleNav() {
@@ -36,20 +35,22 @@ class App extends Component {
     if(this.state.navIsOpen) classNames.push('menu-open');
 
     return (
-      <div className={classNames.join(' ')}>
-        <Header
-          handleNavOpen={this.toggleNav}
-        />
-        <Nav
-          handleNavClose={this.toggleNav}
-        />
-        <Content
-          titleText='Design for Humans'
-        />
-        <Overlay
-          handleNavClose={this.toggleNav}
-        />
-      </div>
+      <Router>
+        <div className={classNames.join(' ')}>
+          <Header
+            handleNavOpen={this.toggleNav}
+          />
+          <Nav
+            handleNavClose={this.toggleNav}
+          />
+          <Content
+            titleText='Design for Humans'
+          />
+          <Overlay
+            handleNavClose={this.toggleNav}
+          />
+        </div>
+      </Router>
     );
   }
 }
