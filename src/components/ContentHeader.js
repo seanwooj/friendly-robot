@@ -6,8 +6,15 @@ class ContentHeader extends React.Component {
   state = {
     windowHeight: 0,
     windowWidth: 0,
-    // this needs to be moved at some point, and replaced with a more sane system
+    fetched: false,
+    headerData: {},
     bgImgUrl: 'https://images.contentful.com/4bfme0qry1sf/1CG9CuGWEgOOi6EygYcyG2/c332b163d8358b70eecc8079fe86c2b1/introduction_img3.jpg'
+  }
+
+  constructor(props) {
+    super(props);
+
+    this.getData = this.getData.bind(this);
   }
 
   componentDidMount() {
@@ -21,6 +28,10 @@ class ContentHeader extends React.Component {
 
   updateWindowDimensions = () => {
     this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
+  }
+
+  getData = () => {
+
   }
 
   render() {

@@ -5,7 +5,7 @@ import Header from './components/Header.js';
 import Nav from './components/Nav.js';
 import Overlay from './components/Overlay.js';
 import Content from './components/Content.js';
-import ContentfulClient from './lib/ContentfulClient.js'
+import DataClient from './lib/dataClient.js'
 
 const history = createHistory();
 
@@ -16,12 +16,17 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    this.dataClient = new DataClient();
 
     this.toggleNav = this.toggleNav.bind(this);
   }
 
   componentDidMount() {
-
+    this.dataClient
+      .fetchData()
+      .then((data) => {
+        debugger;
+      })
   }
 
   toggleNav() {
