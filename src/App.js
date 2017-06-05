@@ -5,6 +5,7 @@ import Header from './components/Header.js';
 import Nav from './components/Nav.js';
 import Overlay from './components/Overlay.js';
 import Content from './components/Content.js';
+import LoaderContainer from './components/LoaderContainer.js';
 import { client } from './Client.js';
 
 const history = createHistory();
@@ -39,7 +40,6 @@ class App extends Component {
   render() {
     let classNames = ['App'];
     if(this.state.navIsOpen) classNames.push('menu-open');
-
     return (
       <Router history={history}>
         <div className={classNames.join(' ')}>
@@ -49,11 +49,14 @@ class App extends Component {
           <Nav
             handleNavClose={this.toggleNav}
           />
-          <Content
-            page={this.state.page}
-            titleText='Design for Humans'
-            hasFetched={this.state.hasFetched}
-          />
+          {(this.state.hasFetched) ?
+            <Content
+              content={this.state.page}
+              hasFetched={this.state.hasFetched}
+            />
+          :
+            <LoaderContainer />
+          }
           <Overlay
             handleNavClose={this.toggleNav}
           />

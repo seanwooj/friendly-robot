@@ -8,7 +8,7 @@ class Content extends Component {
       <div id='content'>
         <ContentHeader
           hasFetched={this.props.hasFetched}
-          titleText={this.props.titleText}
+          content={this.props.content.fields.headerBlock}
         />
       </div>
     );

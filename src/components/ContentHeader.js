@@ -7,7 +7,7 @@ class ContentHeader extends React.Component {
     windowHeight: 0,
     windowWidth: 0,
     fetched: false,
-    headerData: {},
+    headline: '',
     bgImgUrl: 'https://images.contentful.com/4bfme0qry1sf/1CG9CuGWEgOOi6EygYcyG2/c332b163d8358b70eecc8079fe86c2b1/introduction_img3.jpg'
   }
 
@@ -20,6 +20,12 @@ class ContentHeader extends React.Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
+
+    debugger;
+    this.setState({
+      bgImgUrl: this.props.content.fields.headerImage.fields.file.url,
+      headline: this.props.content.fields.headline
+    })
   }
 
   componentWillUnmount() {
@@ -47,7 +53,7 @@ class ContentHeader extends React.Component {
             <div className='container'>
               <div className='row'>
                 <div className='content-header-title' style={{'lineHeight': this.state.windowHeight + 'px'}}>
-                  <h1>{this.props.titleText}</h1>
+                  <h1>{this.state.headline}</h1>
                 </div>
                 <div className='content-header-subtitle'>{this.props.subtitleText}</div>
               </div>
