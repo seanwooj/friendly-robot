@@ -4,7 +4,7 @@ import createHistory from 'history/createBrowserHistory';
 import Header from './components/Header.js';
 import Nav from './components/Nav.js';
 import Overlay from './components/Overlay.js';
-import Content from './components/Content.js';
+import Container from './components/Container.js';
 import LoaderContainer from './components/LoaderContainer.js';
 import { client } from './Client.js';
 
@@ -51,7 +51,7 @@ class App extends Component {
             handleNavClose={this.toggleNav}
           />
           {(this.state.hasFetched) ?
-            <Content
+            <Container
               content={this.state.page}
               hasFetched={this.state.hasFetched}
             />
