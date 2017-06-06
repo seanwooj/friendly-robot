@@ -3,7 +3,7 @@ import ContentHeader from './ContentHeader';
 import ContentBlock from './ContentBlock';
 
 
-class Content extends Component {
+class Container extends Component {
 
   state = {
     contentBlocks: []
@@ -18,7 +18,7 @@ class Content extends Component {
 
   createContentBlockElements = (contentBlockData) => {
     return contentBlockData.map((data, index) => {
-      return( <ContentBlock key={index} />);
+      return( <ContentBlock key={index} content={data} />);
     })
   }
 
@@ -39,4 +39,4 @@ class Content extends Component {
   }
 }
 
-export default Content;
+export default Container;
