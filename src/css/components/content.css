@@ -8,12 +8,13 @@
   to { opacity: 1; }
 }
 
-.App.menu-open #content {
+.App.menu-open #container {
   transform: translate3d(-25%,0,0);
 }
 
 .content-header {
   color: white;
+  margin-bottom: 100px;
 }
 
 .content-header .content-header-container {
@@ -24,7 +25,7 @@
   text-align: center;
 }
 
-.content-header .content-header-container .content-header-title {
+.content-header .content-header-container .content-header-title * {
   font-size: 72px;
   vertical-align: middle;
 }
@@ -32,4 +33,16 @@
 .content-header .content-header-radial {
   height: 100%; width: 100%;
   background-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0));
+}
+
+.content-block {
+  margin-bottom: 100px;
+}
+
+.content-block .content {
+
+}
+
+.content-block .content img {
+  width: 100%;
 }

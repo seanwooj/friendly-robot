@@ -22,9 +22,9 @@ class ContentBlock extends Component {
   render () {
     const contentEls = this.createContentElement(this.state.content);
     return(
-      <div className='container'>
+      <section className='container content-block'>
         {contentEls}
-      </div>
+      </section>
     )
   }
 }

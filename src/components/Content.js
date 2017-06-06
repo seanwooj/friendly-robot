@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 
 class Content extends Component {
@@ -8,8 +9,8 @@ class Content extends Component {
   render() {
 
     return(
-      <div className='six columns'>
-        {this.props.content.fields.textContent}
+      <div className='content six columns'>
+        <ReactMarkdown source={this.props.content.fields.textContent} />
       </div>
     );
   }

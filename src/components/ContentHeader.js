@@ -51,8 +51,8 @@ class ContentHeader extends React.Component {
           <div className='content-header-radial'>
             <div className='container'>
               <div className='row'>
-                <div className='content-header-title' style={{'lineHeight': this.state.windowHeight + 'px'}}>
-                  <h1>{this.state.headline}</h1>
+                <div className='content-header-title'>
+                  <h1 style={{'lineHeight': this.state.windowHeight + 'px'}} >{this.state.headline}</h1>
                 </div>
                 <div className='content-header-subtitle'>{this.props.subtitleText}</div>
               </div>
